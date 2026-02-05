@@ -1,0 +1,8 @@
+name = "newtodo"
+compatibility_date = "2026-02-05"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "newtodo"
+database_id = "b9c71865-b741-4080-bd72-12c1f7a9bb35"
