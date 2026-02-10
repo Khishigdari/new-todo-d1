@@ -72,13 +72,11 @@ const CreateClubPage = () => {
               <Duration />
               <FieldLabel htmlFor="studentNumber">Сурагчдын тоо</FieldLabel>
               <Input
-                // id="studentNumber"
                 placeholder="Max: 20"
                 value={clubMaxStudent}
                 onChange={(e) => setClubMaxStudent(e.target.value)}
               />
               <Input
-                // id="studentNumber"
                 placeholder="Min"
                 value={clubMinStudent}
                 onChange={(e) => setClubMinStudent(e.target.value)}
@@ -91,7 +89,7 @@ const CreateClubPage = () => {
             type="submit"
             onClick={() =>
               toast.success("Club created successfully", {
-                position: "top-center",
+                position: "bottom-right",
               })
             }
           >
