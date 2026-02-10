@@ -11,8 +11,10 @@ import { ClassRoom } from "./ClassRoom";
 import { StartTime } from "./StartTime";
 import { Duration } from "./Duration";
 import { Input } from "@/components/ui/input";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { ClassTeacherType } from "@/lib/types";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 const CreateClubPage = () => {
   const [clubName, setClubName] = useState<string>("");
@@ -27,7 +29,7 @@ const CreateClubPage = () => {
   const [clubMinStudent, setClubMinStudent] = useState<string>("");
   console.log({ clubStartDate });
   return (
-    <div className=" min-w-180 p-10 m-auto">
+    <div className=" min-w-180 p-8 m-auto">
       <Card className="p-10">
         <CardHeader className="flwx justify-center font-semibold text-xl">
           Шинэ клуб нээх
@@ -84,6 +86,18 @@ const CreateClubPage = () => {
             </Field>
           </FieldGroup>
         </FieldGroup>
+        <CardFooter className="flex justify-end mt-5">
+          <Button
+            type="submit"
+            onClick={() =>
+              toast.success("Club created successfully", {
+                position: "top-center",
+              })
+            }
+          >
+            Create Club
+          </Button>
+        </CardFooter>
       </Card>
     </div>
   );

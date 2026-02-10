@@ -46,7 +46,7 @@ export function CreateClubBtn() {
               <Label htmlFor="clubName">Клубын нэр</Label>
               <Textarea placeholder="Клубын нэр" />
             </Field>
-            <Teachers />
+            {/* <Teachers /> */}
             <Field>
               <Label htmlFor="description">Клубын зорилго</Label>
               <Textarea placeholder="Клубын зорилго" />
