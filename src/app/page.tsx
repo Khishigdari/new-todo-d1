@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Trash2, Loader2, ClipboardList } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Todo = {
   id: number;
@@ -56,6 +57,7 @@ const DELETE_TODO = gql`
 `;
 
 export default function Home() {
+  const router = useRouter();
   const [text, setText] = useState<string>("");
   const { data, loading, error } = useQuery<GetTodosData>(GET_TODOS);
 
@@ -103,6 +105,10 @@ export default function Home() {
     } catch (err) {
       console.error("Delete error:", err);
     }
+  };
+
+  const handlePineClub = () => {
+    router.push("/pinebaatar");
   };
 
   return (
@@ -195,6 +201,7 @@ export default function Home() {
           )}
         </div>
       </Card>
+      <Button onClick={handlePineClub}>pineclub</Button>
     </div>
   );
 }
