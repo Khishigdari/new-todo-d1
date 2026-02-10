@@ -7,8 +7,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { ClassTeacherType } from "@/lib/types";
+import { Dispatch, SetStateAction } from "react";
 
-export function Teachers() {
+type TeachersProps = {
+  teacherName: ClassTeacherType[];
+  setTeacherName: Dispatch<SetStateAction<ClassTeacherType[]>>;
+};
+
+export function Teachers({ teacherName, setTeacherName }: TeachersProps) {
   return (
     <Select>
       <div className="flex flex-col w-full gap-3">

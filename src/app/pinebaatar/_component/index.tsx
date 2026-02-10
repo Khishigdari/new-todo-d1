@@ -5,3 +5,5 @@ export * from "./ClassRoom";
 export * from "./StartTime";
 export * from "./Duration";
 export * from "./Teachers";
+export * from "./AppSideBar";
+export * from "./CreateClubPage";
