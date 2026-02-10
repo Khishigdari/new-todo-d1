@@ -84,18 +84,6 @@ const CreateClubPage = () => {
             </Field>
           </FieldGroup>
         </FieldGroup>
-        <CardFooter className="flex justify-end mt-5">
-          <Button
-            type="submit"
-            onClick={() =>
-              toast.success("Club created successfully", {
-                position: "bottom-right",
-              })
-            }
-          >
-            Create Club
-          </Button>
-        </CardFooter>
       </Card>
     </div>
   );
